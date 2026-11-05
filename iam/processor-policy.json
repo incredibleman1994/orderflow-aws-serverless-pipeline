@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadIncomingFiles",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:DeleteObject"],
+      "Resource": "arn:aws:s3:::REPLACE_BUCKET/incoming/*"
+    },
+    {
+      "Sid": "WriteProcessedAndFailedFiles",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": [
+        "arn:aws:s3:::REPLACE_BUCKET/processed/*",
+        "arn:aws:s3:::REPLACE_BUCKET/failed/*"
+      ]
+    },
+    {
+      "Sid": "WriteOrders",
+      "Effect": "Allow",
+      "Action": "dynamodb:PutItem",
+      "Resource": "arn:aws:dynamodb:REPLACE_REGION:REPLACE_ACCOUNT_ID:table/orders"
+    },
+    {
+      "Sid": "PublishSummaryNotifications",
+      "Effect": "Allow",
+      "Action": "sns:Publish",
+      "Resource": "arn:aws:sns:REPLACE_REGION:REPLACE_ACCOUNT_ID:pipeline-notifications"
+    }
+  ]
+}

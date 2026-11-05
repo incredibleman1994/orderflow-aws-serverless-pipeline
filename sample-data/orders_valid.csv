@@ -1,0 +1,9 @@
+order_id,customer,product,quantity,unit_price
+ORD-1001,Asha Traders,USB-C Cable,10,4.99
+ORD-1002,Asha Traders,Laptop Stand,2,29.50
+ORD-1003,Bharat Retail,Wireless Mouse,5,12.00
+ORD-1004,Bharat Retail,Keyboard,3,45.25
+ORD-1005,Chitra Stores,Monitor 24in,1,159.99
+ORD-1006,Chitra Stores,HDMI Cable,8,6.75
+ORD-1007,Deepak Electronics,Webcam,4,38.00
+ORD-1008,Deepak Electronics,Headset,6,22.40
